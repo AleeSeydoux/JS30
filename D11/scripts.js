@@ -9,11 +9,8 @@ const skipButtons = player.querySelectorAll('[data-skip]');
 const ranger = player.querySelectorAll('.player__slider');
 /*build our functions */
 function togglePlay(){
-    if(video.paused){
-        video.play();
-    }else{
-        video.pause();
-    }
+    const method = video.paused ? 'play' : 'pause';
+    video[method]();
 }
 
 /*Hook up the event listener */
