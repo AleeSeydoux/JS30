@@ -6,7 +6,7 @@ const progress = player.querySelector('.progress');
 const progress_bar = player.querySelector('.progress__filled');
 const toggle = player.querySelector('.toggle');
 const skipButtons = player.querySelectorAll('[data-skip]');
-const ranger = player.querySelectorAll('.player__slider');
+const ranges = player.querySelectorAll('.player__slider');
 /*build our functions */
 function togglePlay(){
     const method = video.paused ? 'play' : 'pause';
@@ -20,14 +20,12 @@ function updateButton(){
 }
 
 function skip(){
-    console.log(this.dataset.skip);
     video.currentTime += parseFloat(this.dataset.skip);
 }
 
 function handleRangeUpdate(){
     video[this.name] = this.value;
-    console.log(this.name);
-    console.log(this.value);
+   
 }
 
 /*Hook up the event listener */
